@@ -31,7 +31,7 @@ MODULE MainModule
         lx := cur.trans.x;
         ly := cur.trans.y;
 
-        str := "--a++/--b++/--c++";
+        str := "1234567890";
 
         WHILE itr < StrLen(str) DO
             ch := StrPart(str, itr, 1);
@@ -85,6 +85,17 @@ MODULE MainModule
             ELSEIF ch = "v" THEN V;
             ELSEIF ch = "z" THEN Z;
             ELSEIF ch = "Z" THEN Z_sum;
+            ELSEIF ch = "." THEN pika;
+            ELSEIF ch = "1" THEN st1;
+            ELSEIF ch = "2" THEN st2;
+            ELSEIF ch = "3" THEN st3;
+            ELSEIF ch = "4" THEN st4;
+            ELSEIF ch = "5" THEN st5;
+            ELSEIF ch = "6" THEN st6;
+            ELSEIF ch = "7" THEN st7;
+            ELSEIF ch = "8" THEN st8;
+            ELSEIF ch = "9" THEN st9;
+            ELSEIF ch = "0" THEN st0;
             ELSEIF ch = "/" THEN nova_vrstica;
             ELSEIF ch = "-" THEN
                 IF cur_ltr > 1 then
@@ -415,5 +426,116 @@ MODULE MainModule
         Z;
         moveXY +9/8*sx, -1/4*sy;
         sumnik;
+    ENDPROC
+    PROC pika()
+        naslednja;
+        moveXY -sx, -sy/2;
+        dol;
+        gor;
+    ENDPROC
+    PROC st1()
+        naslednja;
+        moveXY -1/4*sx, 0;
+        dol;
+        moveXY +1/4*sx, -1/2*sy;
+        moveXY -sx, 0;
+        gor;
+        moveXY 0, +1/2*sy;
+        dol;
+        moveXY 0, -sy;
+        gor;
+    ENDPROC
+    PROC st2()
+        naslednja;
+        dol;
+        moveXY 0, -sy;
+        moveXY -1/2*sx, 0;
+        moveXY 0, +sy;
+        moveXY -1/2*sx, 0;
+        moveXY 0, -sy;
+        gor;
+    ENDPROC
+    PROC st3()
+        naslednja;
+        dol;
+        moveXY 0, -sy;
+        moveXY -sx, 0;
+        moveXY 0, +sy;
+        gor;
+        moveXY +1/2*sx, 0;
+        dol;
+        moveXY 0, -sy;
+        gor;
+    ENDPROC
+    PROC st4()
+        naslednja;
+        dol;
+        moveXY -1/2*sx, 0;
+        moveXY 0, -sy;
+        gor;
+        moveXY +1/4*sx, 1/2*sy;
+        dol;
+        moveXY -3/4*sx, 0;
+        gor;
+    ENDPROC
+    PROC st5()
+        naslednja;
+        moveXY 0, -3/4*sy;
+        dol;
+        moveXY 0, +3/4*sy;
+        moveXY -sx/2, 0;
+        moveXY 0, -sy;
+        moveXY -sx/2, 0;
+        moveXY 0, +sy;
+        gor;
+    ENDPROC
+    PROC st6()
+        naslednja;
+        moveXY 0, -3/4*sy;
+        dol;
+        moveXY 0, +3/4*sy;
+        moveXY -sx, 0;
+        moveXY 0, -sy;
+        moveXY +sx/2, 0;
+        moveXY 0, +3/4*sy;
+        gor;
+    ENDPROC
+    PROC st7()
+        naslednja;
+        dol;
+        moveXY 0, -sy;
+        moveXY -sx, 1/4*sy;
+        gor;
+        moveXY +1/2*sx, 1/2*sy;
+        dol;
+        moveXY 0, -3/4*sy;
+        gor;
+    ENDPROC
+    PROC st8()
+        o;
+        moveXY -1/2*sx, 0;
+        dol;
+        moveXY 0, -sy;
+        gor;
+    ENDPROC
+    PROC st9()
+        naslednja;
+        dol;
+        moveXY 0, -sy;
+        moveXY -sx, 0;
+        gor;
+        moveXY +1/2*sx, 0;
+        dol;
+        moveXY 0, +sy;
+        moveXY +1/2*sx, 0;
+        gor;
+    ENDPROC
+    PROC st0()
+        naslednja;
+        o;
+        moveXY 0, -sy;
+        dol;
+        moveXY -sx, +sy;
+        gor;
     ENDPROC
 ENDMODULE
